@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 | 【企業名】</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* aboutページ固有のスタイル（style.cssに追記してもOK） */
+        .page-hero {
+            background-color: #f0f4f8; /* 控えめな背景色 */
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .page-hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #002e5c;
+            margin-bottom: 10px;
+        }
+        .page-hero p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .message-section {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            padding: 80px 0;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .message-img-container {
+            flex-shrink: 0;
+            width: 300px;
+        }
+        .message-img-container img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        .message-content {
+            flex-grow: 1;
+        }
+        .message-content h3 {
+            font-size: 2rem;
+            color: #004d99;
+            margin-bottom: 20px;
+            font-weight: 300;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .message-content p {
+            margin-bottom: 20px;
+        }
+        .signature {
+            text-align: right;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        /* 企業情報テーブル */
+        .company-info-section table {
+            width: 100%;
+            border-collapse: collapse;
+            max-width: 900px;
+            margin: 40px auto;
+            border: 1px solid #ddd;
+        }
+        .company-info-section th, .company-info-section td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .company-info-section th {
+            background-color: #f4f6f8;
+            color: #002e5c;
+            width: 30%;
+            font-weight: 700;
+        }
+        .company-info-section td {
+            font-weight: 400;
+        }
+
+        /* アクセス情報 */
+        .access-section .map-container {
+            height: 450px;
+            margin-top: 40px;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .access-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .access-details {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-left: 5px solid #004d99;
+            border-radius: 4px;
+        }
+
+        /* レスポンシブ対応 */
+        @media (max-width: 768px) {
+            .message-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .message-img-container {
+                width: 100%;
+                text-align: center;
+            }
+            .message-img-container img {
+                width: 70%;
+                height: auto;
+            }
+            .company-info-section th, .company-info-section td {
+                display: block;
+                width: 100%;
+            }
+            .company-info-section th {
+                background-color: #e6e9ed;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../index.html">COMPANY LOGO</a>
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" style="color: #004d99; font-weight: 700;">会社概要</a></li>
+                    <li><a href="../service/index.html">事業内容</a></li>
+                    <li><a href="../news/index.html">ニュース</a></li>
+                    <li><a href="../recruit/index.html">採用情報</a></li>
+                    <li><a href="../contact.html" class="contact-btn">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h2>会社概要</h2>
+            <p>【企業名】の基本情報、代表メッセージ、企業理念をご紹介します。</p>
+        </div>
+    </section>
+    
+    <section class="message-section container">
+        <div class="message-img-container">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1ODc3MTd8MHwxfHJhbmRvbXx8Y2VvJTVDZHJ5JTIwJTVDbWVzc2FnZXx8fHx8fDE3MDIyNTcwNDJ8&ixlib=rb-4.0.3&q=80&w=600" alt="代表取締役社長の肖像">
+        </div>
+        <div class="message-content">
+            <h3>代表メッセージ</h3>
+            <p>私たちが目指すのは、単なる事業の成功ではありません。革新的なテクノロジーと、お客様との深い信頼関係を通じて、持続可能な社会の実現に貢献することです。</p>
+            <p>創業以来、私たちは「**信頼と革新**」を経営の柱とし、変化の激しい時代においても、常に一歩先の未来を見据えた挑戦を続けてまいりました。</p>
+            <p>これからも、全社員が一丸となり、プロフェッショナルとしての誇りを持って、お客様、株主様、そして社会全体の期待に応えてまいります。皆様の変わらぬご支援を心よりお願い申し上げます。</p>
+            <p class="signature">代表取締役社長 山田 太郎</p>
+        </div>
+    </section>
+
+    <hr class="container" style="border-top: 1px solid #eee; margin: 0 auto;">
+
+    <section class="company-info-section section-padding">
+        <div class="container">
+            <h3 class="section-title">企業情報</h3>
+            <table>
+                <tr>
+                    <th>会社名</th>
+                    <td>株式会社【企業名】 (Company Name, Inc.)</td>
+                </tr>
+                <tr>
+                    <th>所在地</th>
+                    <td>〒100-0005 東京都千代田区丸の内1-1-1 大手町ビル 10F</td>
+                </tr>
+                <tr>
+                    <th>設立</th>
+                    <td>20XX年X月X日</td>
+                </tr>
+                <tr>
+                    <th>代表者</th>
+                    <td>代表取締役社長 山田 太郎</td>
+                </tr>
+                <tr>
+                    <th>資本金</th>
+                    <td>X億円</td>
+                </tr>
+                <tr>
+                    <th>従業員数</th>
+                    <td>XX名（20XX年X月現在）</td>
+                </tr>
+                <tr>
+                    <th>事業内容</th>
+                    <td>【事業内容ハイライトを簡潔に記載】</td>
+                </tr>
+            </table>
+            <p style="text-align: center; margin-top: 30px;">
+                <a href="philosophy.html" class="cta-button secondary-cta" style="color: #004d99; border-color: #004d99;">企業理念・ビジョン詳細へ →</a>
+            </p>
+        </div>
+    </section>
+
+    <section class="access-section section-padding bg-light-gray">
+        <div class="container">
+            <h3 class="section-title">アクセス</h3>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030230218!2d139.7594541152582!3d35.68123618019349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b8e0b65e903%3A0x6754041d8e6a1c17!2z5L2x6aag5Z-O5L2P!5e0!3m2!1sja!2sjp!4v1602257200000" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="access-details">
+                <p><strong>所在地:</strong> 〒100-0005 東京都千代田区丸の内1-1-1 大手町ビル 10F</p>
+                <p><strong>交通:</strong> JR東京駅 丸の内北口より徒歩5分 / 東京メトロ 大手町駅 B1出口直結</p>
+                <p>TEL: 03-XXXX-XXXX (代表)</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <p class="footer-logo">COMPANY LOGO</p>
+                    <p>〒100-0005 東京都千代田区丸の内1-1-1<br>大手町ビル 10F</p>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">会社概要</a></li>
+                        <li><a href="../service/index.html">事業内容</a></li>
+                        <li><a href="../news/index.html">ニュース</a></li>
+                        <li><a href="../ir/index.html">IR情報</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="../recruit/index.html">採用情報</a></li>
+                        <li><a href="../contact.html">お問い合わせ</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">サイトマップ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Company Name All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

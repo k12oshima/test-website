@@ -1,0 +1,378 @@
+/* リセットと基本設定 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: #004d99; /* ネイビー系 */
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 共通レイアウト */
+.container {
+    width: 90%;
+    max-width: 1280px; /* ゆったりとした広めのレイアウト */
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 80px 0; /* 大きな余白 */
+}
+
+.bg-light-gray {
+    background-color: #f8f8f8;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 300; /* 細めのフォントでモダンに */
+    text-align: center;
+    margin-bottom: 60px;
+    color: #002e5c; /* 深めのネイビー */
+}
+
+/* ヘッダー */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #002e5c;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-size: 1rem;
+    color: #333;
+    padding: 5px 0;
+}
+
+.contact-btn {
+    background-color: #004d99;
+    color: #fff !important;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.contact-btn:hover {
+    background-color: #002e5c;
+    opacity: 1;
+}
+
+/* ヒーローセクション */
+.hero-section {
+    position: relative;
+    height: 70vh; /* 画面の約70%を占めるゆったりとした高さ */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.6); /* 画像を暗くして文字の視認性を高める */
+}
+
+.hero-content {
+    color: #fff;
+    z-index: 10;
+}
+
+.hero-content .tagline {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ff9900; /* アクセントカラー (穏やかなゴールド系) */
+    color: #fff;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+    opacity: 1;
+}
+
+.secondary-cta {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.secondary-cta:hover {
+    background-color: #fff;
+    color: #002e5c;
+}
+
+/* コアバリューセクション */
+.values-grid {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+}
+
+.value-item {
+    flex: 1;
+}
+
+.value-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.value-item h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #004d99;
+}
+
+/* サービスハイライト */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.service-card .card-content {
+    padding: 30px;
+}
+
+.service-card h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #002e5c;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #004d99;
+    font-weight: 700;
+}
+
+/* ニュースセクション */
+.news-list {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    border-top: 1px solid #ddd;
+}
+
+.news-list li {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-date {
+    font-weight: 700;
+    color: #666;
+    flex-basis: 120px;
+    flex-shrink: 0;
+}
+
+.news-category {
+    background-color: #eee;
+    color: #333;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    margin-right: 20px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.news-list a {
+    color: #333;
+    flex-grow: 1;
+}
+
+.archive-link {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+    color: #004d99;
+}
+
+/* CTAセクション */
+.cta-section {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.cta-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 46, 92, 0.7); /* 深いネイビーのオーバーレイ */
+    z-index: 1;
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-section h3 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* フッター */
+.main-footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 40px 0 20px 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-info {
+    flex-basis: 30%;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-nav ul {
+    list-style: none;
+}
+
+.footer-nav a {
+    color: #ccc;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* 応答性 (簡易的なブレークポイント) */
+@media (max-width: 992px) {
+    .hero-content h2 {
+        font-size: 3rem;
+    }
+    .values-grid, .service-grid, .footer-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-nav {
+        gap: 30px;
+    }
+    .news-list li {
+        flex-wrap: wrap;
+    }
+    .news-category {
+        margin-right: 10px;
+    }
+    .news-list a {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
